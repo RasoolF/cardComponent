@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Outfit:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+.container{
+    background-color:  hsl(217, 54%, 11%);
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgContainer{
+    height: 250px;
+    position: relative;
+    cursor: pointer;
+}
+.imgContainer img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.imgContainer .overlay{
+    display: none;
+    top:0;
+    left:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178,100%,50%);
+    opacity: .5;
+    border-radius: 5px;
+}
+.imgContainer:hover .overlay{
+    display: block;
+}
+.card{
+    width: 90%;
+    background-color: hsl(216, 50%, 16%);
+    padding:20px;
+    border-radius: 10px;
+    box-shadow:0px 0px 40px rgba(0, 0, 0, .5) ;
+}
+
+.cardBody h1{
+
+    font-size: 18px;
+    font-family:"Outfit","Josefin Sans";
+    color:hsl(0, 0%, 100%);
+    margin:10px 0;
+    cursor: pointer;
+
+}
+.cardBody h1:hover{
+    color:hsl(178, 100%, 50%)
+}
+.cardBody p{
+    color: hsl(215, 51%, 70%);
+    font-size: 15px;
+    font-family: "Outfit","Josefin Sans";
+    margin-bottom: 10px;
+}
+.cardBody .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border-bottom:1px solid hsl(215, 32%, 27%);
+    padding:15px 0;
+}
+.leftCol, .rightCol{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.leftCol p,.rightCol p{
+    margin:0;
+    font-size: 15px;
+    display: flex;
+    align-content: center;
+    padding-left:5px;
+    font-weight: 600;
+}
+.leftCol p{
+    color:hsl(178, 100%, 50%)
+}
+
+.cardFooter{
+    padding-top:15px ;
+    display: flex;
+    align-items: center;
+}
+.cardFooter img{
+    width:30px;
+    height:30px;
+}
+.cardFooter p{
+    padding:10px 5px;
+    font-size: 12px;
+    margin: 0;
+}
+.cardFooter span{
+    color:white;
+    cursor: pointer;
+    padding:0 5px;
+}
+.cardFooter span:hover{
+    color:hsl(178, 100%, 50%)
+}
+@media (min-width:376px){
+	.container{
+		height:100vh;
+	}
+    .card{
+        width:70%;
+    }
+}
+@media (min-width:601px){
+	.container{
+		height:100vh;
+	}
+    .card{
+        width:320px;
+    }
+}
+
